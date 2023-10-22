@@ -3,7 +3,7 @@
 // const puppeteer = require('puppeteer');
 // const app = express();
 // // Port on which your server will listen
-// const PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT || 3030;
 
 // // Define a route to serve an HTML page
 // app.get('/', (req, res) => {
@@ -54,9 +54,6 @@
 
 // getDefinition("cat")
 
-// app.listen(PORT, () => {
-//     console.log(`Server is running on http://localhost:${PORT}`);
-// });
 
 const express = require("express")
 const app = express()
@@ -65,4 +62,6 @@ app.get("/", function (req, res) {
     res.send("hello my dude")
 })
 
-app.listen(3000)
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
