@@ -2,7 +2,8 @@ const cors = require('cors');
 const express = require('express');
 const puppeteer = require('puppeteer');
 const app = express();
-const port = 3000; // Port on which your server will listen
+// Port on which your server will listen
+const PORT = process.env.PORT || 3030;
 
 // Define a route to serve an HTML page
 app.get('/', (req, res) => {
@@ -46,9 +47,13 @@ async function getDefinition(word) {
     // Close the browser
     await browser.close();
 
+    console.log(definition)
+
     return definition;
 }
 
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+getDefinition("cat")
+
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
