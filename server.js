@@ -2,6 +2,7 @@ const cors = require('cors');
 const express = require('express');
 const puppeteer = require('puppeteer');
 const app = express();
+
 // Port on which your server will listen
 const PORT = process.env.PORT || 3030;
 
@@ -52,7 +53,7 @@ async function getDefinition(word) {
     return definition;
 }
 
-getDefinition("cat")
+// getDefinition("cat")
 
 
 
