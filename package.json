@@ -25,6 +25,6 @@
     "puppeteer-core": "^21.4.0"
   },
   "engines": {
-    "node": "18.x"
+    "node": "16.15.1"
   }
 }
